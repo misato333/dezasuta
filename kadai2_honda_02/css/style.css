@@ -37,6 +37,23 @@ img {
   border: none;
 }
 /* ここから課題 */
+.nav_wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  margin-bottom: 80px;
+}
+.gnav ul li {
+font-size: 14px;
+border-right: 1px solid #333;
+}
+.gnav ul li:last-child {
+border-right: none;
+}
 
 ul {
     display: flex;
@@ -45,12 +62,65 @@ ul {
     padding: 0;
     max-width: 980px;
     margin: 0 auto;
-   
 }
 
 ul li {
     padding: 0 20px;
 }
+
+/* スマホナビ表示消す */
+.nav_wrap_sp {
+  display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  .nav_wrap {
+    display: block;
+  }
+
+.nav_wrap {
+  width: 100%;
+}
+.gnav ul {
+  display: block;
+  
+} 
+.gnav ul li {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: solid 1px #333;
+  border-right:none ;  
+}
+}
+
+
+/* SP表示 */
+/* @media screen and (max-width: 767px) {
+  .nav_wrap {
+    display: none;
+  }
+
+.nav_wrap_sp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.gnav_sp ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+} 
+.gnav_sp ul li {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: solid 1px #333;  
+}
+} */
+
+
+  
+  
 /*Work1 フレックスボックスに慣れよう*/
 .wrap_1 {
     display: flex;
@@ -87,75 +157,11 @@ ul li {
     margin-bottom: 40px;
 }
 
-.nav_wrap {
-    max-width: 960px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    box-sizing: border-box;
-    margin-bottom: 80px;
-}
-.gnav ul li {
-  font-size: 14px;
-  border-right: 1px solid #333;
-}
-.gnav ul li:last-child {
-  border-right: none;
-}
-
-
-@media screen and (max-width: 767px) {
-  .nav_wrap {
-    display: block;
-  }  
-}
 
 
 
-/* スマホナビ表示消す */
-/* .nav_wrap_sp {
-  display: none;
-}
 
-@media screen and (max-width: 767px) {
-  .nav_wrap {
-    display: none;
-  }
-}
-.nav_wrap_sp {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 
-}
-.gnav_sp ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-} 
-.gnav_sp ul li {
-  padding: 10px 0;
-  border-bottom: solid 1px #333;  
-} */
 
-/* 擬似要素(仮) */
-/*.gnav ul li a {
-  position: relative;
-}
-.gnav ul li a::before{
-  content: "";
-  display:inline-block;
-  width: 1px;
-  height: 20px;
-  background: #333;
-  position: absolute;
-  left: -20px;
-  top: 0;
-  bottom: 0;
-}
-.gnav ul li a:first-of-type::before{
-content: none;
-} */
+
+
