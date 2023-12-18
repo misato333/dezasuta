@@ -10,118 +10,77 @@ dt,
 dd,
 ul,
 li {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  /*デフォルトの文字色、font-familyを予め当てておく*/
-  color: #333;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
-    "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    /*デフォルトの文字色、font-familyを予め当てておく*/
+    color: #333;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 
 a {
-  /*下線を消す*/
-  text-decoration: none;
-  /*色を消す*/
-  color: inherit;
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
 }
 
 ul {
-  /*左の「・」を消す*/
-  list-style: none;
+    /*左の「・」を消す*/
+    list-style: none;
 }
 
 img {
-  max-width: 100%;
-  vertical-align: bottom;
-  border: none;
-}
-/* ここから課題 */
-.nav_wrap {
-  max-width: 960px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-  box-sizing: border-box;
-  margin-bottom: 80px;
-}
-.gnav ul li {
-font-size: 14px;
-border-right: 1px solid #333;
-}
-.gnav ul li:last-child {
-border-right: none;
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
 }
 
-ul {
+/* ここから課題 */
+.nav_wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    margin-bottom: 80px;
+}
+.gnav ul li {
+    font-size: 14px;
+    border-right: 1px solid #333;
+    padding: 0 20px;
+}
+.gnav ul li:last-child {
+    border-right: none;
+}
+.gnav ul {
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 0;
-    max-width: 980px;
-    margin: 0 auto;
 }
-
-ul li {
-    padding: 0 20px;
-}
-
-/* スマホナビ表示消す */
-.nav_wrap_sp {
-  display: none;
-}
-
 
 @media screen and (max-width: 767px) {
-  .nav_wrap {
-    display: block;
-  }
-
-.nav_wrap {
-  width: 100%;
-}
-.gnav ul {
-  display: block;
-  
-} 
-.gnav ul li {
-  width: 100%;
-  padding: 10px 0;
-  border-bottom: solid 1px #333;
-  border-right:none ;  
-}
+    .nav_wrap {
+        display: block;
+    }
+    .nav_wrap {
+        width: 100%;
+    }
+    .gnav ul {
+        display: block;
+    }
+    .gnav ul li {
+        width: 100%;
+        padding: 10px 0;
+        border-bottom: solid 1px #333;
+        border-right: none;
+    }
 }
 
-
-/* SP表示 */
-/* @media screen and (max-width: 767px) {
-  .nav_wrap {
-    display: none;
-  }
-
-.nav_wrap_sp {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.gnav_sp ul {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-} 
-.gnav_sp ul li {
-  width: 100%;
-  padding: 10px 0;
-  border-bottom: solid 1px #333;  
-}
-} */
-
-
-  
-  
-/*Work1 フレックスボックスに慣れよう*/
+/*Work1 フレックスボックスに慣れよう*/
 .wrap_1 {
     display: flex;
     justify-content: space-between;
@@ -156,12 +115,3 @@ ul li {
     color: #fff;
     margin-bottom: 40px;
 }
-
-
-
-
-
-
-
-
-
