@@ -18,6 +18,7 @@ li {
     font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3",
         "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
         "ＭＳ 明朝", serif;
+    font-feature-settings: "palt";
 }
 
 a {
@@ -77,4 +78,191 @@ body {
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     text-align: center;
+}
+.lead {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.lead_wrap {
+    margin-top: 100px;
+}
+.lead_text1 {
+    font-size: 30px;
+    line-height: 1.75;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.lead_text2 {
+    font-size: 82px;
+    line-height: 1.17;
+    text-align: center;
+    padding-bottom: 45px;
+}
+.lead_text3 {
+    font-size: 23px;
+    line-height: 1.65;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.about {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.about_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.about_pic {
+    width: 50%;
+    border-radius: 0 0 82px 0;
+}
+.about_flexbox {
+    width: 41.5%;
+    margin: 60px 0 40px;
+}
+.about_logo {
+    width: 265px;
+    padding-bottom: 60px;
+}
+.about_heading {
+    font-size: 44px;
+    line-height: 1.38;
+    padding-bottom: 30px;
+}
+.about_text {
+    font-size: 16px;
+    line-height: 1.62;
+}
+.menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 108px 0 100px;
+}
+.menu_logo {
+    width: 143px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.menu_flex {
+    display: flex;
+    justify-content: space-between;
+}
+.menu_item {
+    width: 30%;
+}
+.menu_item_pic {
+    border-radius: 0 40px 0 0;
+}
+.menu_item_heading {
+    color: #d30202;
+    font-size: 38px;
+    line-height: 1.45;
+    margin-top: -20px;
+    margin-left: 14px;
+}
+.menu_item_text {
+    font-size: 17px;
+    line-height: 1.47;
+    padding-top: 14px;
+}
+.gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.gallery_logo {
+    width: 238px;
+    margin-bottom: 25px;
+}
+.gallery_flex {
+    display: flex;
+}
+.gallery_pic {
+    width: 34%;
+    margin-bottom: 70px;
+}
+.event {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.event_logo {
+    width: 166px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+.event_list {
+    background-color: #fff;
+    border: solid 3px #4f260b;
+    padding: 20px 0 20px 160px;
+    margin-bottom: 80px;
+}
+.event_list ul li {
+    font-size: 23px;
+
+    margin-bottom: 20px;
+}
+.event_list ul li time {
+    margin-right: 50px;
+}
+.event_list ul li a {
+    text-decoration: underline;
+}
+.access_logo {
+    width: 206px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+}
+.access_map {
+    position: relative;
+    width: 100%;
+    padding-top: 47%; /* = height ÷ width × 100 */
+}
+.access_map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+footer {
+    background-color: #fff;
+}
+.footer_flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 0 60px;
+}
+.footer_logo {
+    width: 221px;
+}
+.footer_flexbox {
+    font-size: 20px;
+    line-height: 1.95;
+    padding-left: 70px;
+}
+.footer_flexbox p {
+    padding-bottom: 20px;
+}
+.footer_flexbox address {
+    font-style: normal;
+}
+.copyright {
+    font-size: 16px;
+    line-height: 2.1;
+    text-align: center;
+    padding: 80px;
+}
+.pagetop {
+    width: 125px;
+    position: fixed; /* 追従させる為にfixedの値を記述します */
+    z-index: 99999; /* 他の要素の下に隠れないように全面配置させます */
+    top: 380px; /* 上から150pxのところにバナーを配置します */
+    right: 30px; /* 右から40pxのところにバナーを配置します */
+}
+.pagetop a img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    overflow: hidden;
 }
