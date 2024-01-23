@@ -79,30 +79,115 @@ body {
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     text-align: center;
 }
+
+/* スマホ版メニューは消す */
+.sp_nav,
+.sp_btn {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+    /* ハンバーガー */
+    .sp_btn {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .sp_btn span {
+        position: relative;
+        top: 10px;
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+    .sp_btn span::before,
+    .sp_btn span::after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 33px;
+        height: 3px;
+        border-radius: 2px;
+        background: #fff;
+        transition: 0.3s;
+    }
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ハンバーガー　閉じる */
+    .sp_btn.open span {
+        background: transparent;
+    }
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    /* ハンバーガーメニュー */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* デバイスの高さ100％ */
+        background: rgba(0, 0, 0, 0.8); /* 　カンマとピリオドに注意 */
+        z-index: 1;
+    }
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .sp_nav ul li {
+        padding: 20px;
+        color: #fff;
+        font-size: 18px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+            "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    }
+}
+
 .lead {
     max-width: 1000px;
-    margin: 0 auto;
-}
-.lead_wrap {
-    margin-top: 100px;
+    margin: 100px 0 auto;
+    text-align: center;
 }
 .lead_text1 {
     font-size: 30px;
     line-height: 1.75;
-    text-align: center;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 .lead_text2 {
     font-size: 82px;
     line-height: 1.17;
-    text-align: center;
-    padding-bottom: 45px;
+    padding-bottom: 25px;
+    letter-spacing: 0.1em;
 }
 .lead_text3 {
     font-size: 23px;
     line-height: 1.65;
-    text-align: center;
     padding-bottom: 100px;
+    letter-spacing: 0.1em;
 }
 .about {
     max-width: 1000px;
@@ -114,20 +199,24 @@ body {
 }
 .about_pic {
     width: 50%;
+}
+.about_pic img {
     border-radius: 0 0 82px 0;
 }
 .about_flexbox {
     width: 41.5%;
     margin: 60px 0 40px;
+    padding-right: 10px;
 }
 .about_logo {
     width: 265px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 .about_heading {
     font-size: 44px;
     line-height: 1.38;
     padding-bottom: 30px;
+    font-weight: normal;
 }
 .about_text {
     font-size: 16px;
@@ -136,12 +225,12 @@ body {
 .menu {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 108px 0 100px;
+    padding: 108px 10px 100px;
 }
 .menu_logo {
-    width: 143px;
+    width: 150px;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .menu_flex {
     display: flex;
@@ -156,6 +245,7 @@ body {
 .menu_item_heading {
     color: #d30202;
     font-size: 38px;
+    font-weight: normal;
     line-height: 1.45;
     margin-top: -20px;
     margin-left: 14px;
@@ -163,7 +253,7 @@ body {
 .menu_item_text {
     font-size: 17px;
     line-height: 1.47;
-    padding-top: 14px;
+    padding-top: 5px;
 }
 
 .gallery_logo {
@@ -182,9 +272,10 @@ body {
 .event {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 .event_logo {
-    width: 166px;
+    width: 173px;
     margin: 0 auto;
     margin-bottom: 40px;
 }
@@ -193,12 +284,14 @@ body {
     justify-content: center;
     background-color: #fff;
     border: solid 3px #4f260b;
-    padding: 20px 0;
+    padding: 35px;
     margin-bottom: 80px;
 }
 .event_list ul li {
     font-size: 23px;
-    margin-bottom: 20px;
+}
+.event_list ul li + li {
+    margin-top: 20px;
 }
 .event_list ul li time {
     margin-right: 50px;
@@ -211,60 +304,55 @@ body {
     margin: 0 auto;
     margin-bottom: 45px;
 }
-.access_map {
+.access_map iframe {
     display: block;
     position: relative;
     width: 100%;
     height: 470px;
     /* padding-top: 47%; = height ÷ width × 100 */
 }
-.access_map iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+
 footer {
     background-color: #fff;
+    color: #000;
 }
 .footer_flex {
+    max-width: 1000px;
+    margin-right: 70px;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 80px 0 60px;
+    padding: 80px 10px 60px;
 }
 .footer_logo {
     width: 221px;
+    margin-right: 70px;
 }
 .footer_flexbox {
     font-size: 20px;
     line-height: 1.95;
-    padding-left: 70px;
+    margin-top: 10px;
 }
 .footer_flexbox p {
+    color: #000;
+}
+.footer_flexbox address {
     padding-bottom: 20px;
+    color: #000;
 }
 .footer_flexbox address {
     font-style: normal;
 }
+
 .copyright {
+    color: #000;
     font-size: 16px;
     line-height: 2.1;
     text-align: center;
-    padding: 80px;
+    padding-bottom: 80px;
 }
 .pagetop {
     width: 125px;
     position: fixed; /* 追従させる為にfixedの値を記述します */
-    z-index: 99999; /* 他の要素の下に隠れないように全面配置させます */
+    /* z-index: 99999; 他の要素の下に隠れないように全面配置させます */
     top: 380px; /* 上から150pxのところにバナーを配置します */
     right: 30px; /* 右から40pxのところにバナーを配置します */
-}
-.pagetop a img {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    overflow: hidden;
 }
