@@ -169,7 +169,7 @@ body {
 
 .lead {
     max-width: 1000px;
-    margin: 100px 0 auto;
+    margin: 100px auto 0;
     text-align: center;
 }
 .lead_text1 {
@@ -318,7 +318,7 @@ footer {
 }
 .footer_flex {
     max-width: 1000px;
-    margin-right: 70px;
+    margin: 0 auto;
     display: flex;
     padding: 80px 10px 60px;
 }
@@ -353,6 +353,6 @@ footer {
     width: 125px;
     position: fixed; /* 追従させる為にfixedの値を記述します */
     /* z-index: 99999; 他の要素の下に隠れないように全面配置させます */
-    top: 380px; /* 上から150pxのところにバナーを配置します */
+    bottom: 30px; /* 上から150pxのところにバナーを配置します */
     right: 30px; /* 右から40pxのところにバナーを配置します */
 }
