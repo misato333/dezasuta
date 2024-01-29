@@ -433,6 +433,7 @@ body {
         margin-bottom: 20px;
     }
     .event_list {
+        display: block;
         margin-bottom: 35px;
     }
     .event_list ul li {
@@ -442,6 +443,12 @@ body {
     }
     .event_list ul li + li {
         margin-top: 30px;
+    }
+    .event_list ul li a {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
 
@@ -468,6 +475,7 @@ body {
 
 @media screen and (max-width: 767px) {
     .access_map iframe {
+        width: 100%;
         height: 190px;
     }
 }
