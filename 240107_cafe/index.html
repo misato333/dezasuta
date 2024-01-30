@@ -25,21 +25,21 @@
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">MENU</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">EVENT</a></li>
-                    <li><a href="">ACCESS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">MENU</a></li>
-                    <li><a href="">GALLERY</a></li>
-                    <li><a href="">EVENT</a></li>
-                    <li><a href="">ACCESS</a></li>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,8 +52,11 @@
                 ハッピーに溢れる1日を<br>
                 1杯のコーヒーから。
             </p>
-            <p class="lead_text3">毎日を丁寧に大切に過ごしたい。だからこそ一杯一杯丁寧にコーヒーを入れ<br>
-                足を運んでくれるお客さんには落ち着く空間とこだわりのコーヒーを提供したい。</p>
+            <p class="lead_text3">
+                毎日を丁寧に大切に過ごしたい。<br class="sp-only">
+                だからこそ一杯一杯丁寧にコーヒーを入れ<br>
+                足を運んでくれるお客さんには落ち着く空間と<br class="sp-only">
+                こだわりのコーヒーを提供したい。</p>
         </div>
         <section id="about" class="about">
             <div class="about_flex">
@@ -148,13 +151,13 @@
             <div class="event_list">
                 <ul>
                     <li><time datetime="2020-06-23">2020.06.23</time>
-                        <a href="">7月はイベント出店のため0/0お休みします</a>
+                        <a href="#">7月はイベント出店のため0/0お休みします</a>
                     </li>
                     <li><time datetime="2020-03-15">2020.03.15</time>
-                        <a href="">春の新商品新発売。話題のあのブランドとコラボ</a>
+                        <a href="#">春の新商品新発売。話題のあのブランドとコラボ</a>
                     </li>
                     <li><time datetime="2020-02-06">2020.02.06</time>
-                        <a href="">コーヒーの日で30％OFFイベントを開催［3日間限定］</a>
+                        <a href="#">コーヒーの日で30％OFFイベントを開催［3日間限定］</a>
                     </li>
                 </ul>
             </div>
@@ -190,7 +193,7 @@
 
     <script>
         $(function () {
-            $('.sp_btn').on('click', function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });

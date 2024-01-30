@@ -21,6 +21,10 @@ li {
     font-feature-settings: "palt";
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     /*下線を消す*/
     text-decoration: none;
@@ -47,6 +51,16 @@ body {
     background: #e8d9bf;
 }
 
+/* 汎用 */
+.sp-only {
+    display: none;
+}
+@media screen and (max-width: 1100px) {
+    .sp-only {
+        display: block;
+    }
+}
+
 /* ヘッダー */
 
 .header_wrap {
@@ -67,6 +81,9 @@ body {
 @media screen and (max-width: 767px) {
     .header_pic {
         width: 100%;
+    }
+    .header_logo {
+        width: 183px;
     }
 }
 
@@ -196,8 +213,12 @@ body {
 }
 
 @media screen and (max-width: 1100px) {
+    .lead_text1 {
+        padding-bottom: 20px;
+    }
     .lead_text2 {
         font-size: 60px;
+        padding-bottom: 10px;
     }
     .lead_text3 {
         font-size: 16px;
@@ -219,7 +240,7 @@ body {
     .lead_text3 {
         font-size: 16px;
         line-height: 1.87;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.1em;
         padding-bottom: 0px;
     }
 }
@@ -259,6 +280,10 @@ body {
     padding-bottom: 30px;
     font-weight: normal;
 }
+.about_text {
+    font-size: 16px;
+    line-height: 1.62;
+}
 
 @media screen and (max-width: 1100px) {
     .about_heading {
@@ -266,23 +291,19 @@ body {
     }
 }
 
-.about_text {
-    font-size: 16px;
-    line-height: 1.62;
-}
-
 @media screen and (max-width: 767px) {
     .about_flex {
         display: block;
     }
     .about_logo {
-        margin: 60px auto 20px;
+        margin: 0 auto 10px;
         padding-bottom: 0;
         width: 156px;
     }
     .about_flexbox {
         width: 100%;
-        margin-bottom: 55px;
+        margin: 50px 0 40px;
+        padding-right: 0;
     }
     .about_pic {
         display: none;
@@ -293,7 +314,7 @@ body {
     .about_heading {
         font-size: 36px;
         line-height: 1.25;
-        padding: 35px 20px;
+        padding: 30px 10px;
     }
     .about_text {
         line-height: 1.75;
@@ -337,7 +358,7 @@ body {
 
 @media screen and (max-width: 767px) {
     .menu {
-        padding: 0 38px 120px;
+        padding: 0 38px 80px;
     }
     .menu_logo {
         width: 84px;
@@ -345,7 +366,7 @@ body {
     }
     .menu_flex {
         flex-direction: column;
-        row-gap: 60px;
+        row-gap: 50px;
     }
     .menu_item {
         width: 100%;
@@ -357,6 +378,10 @@ body {
     .menu_item_heading {
         font-size: 40px;
         margin-top: -22px;
+        margin-left: 10px;
+    }
+    .menu_item_text {
+        padding-top: 10px;
     }
 }
 
@@ -380,6 +405,7 @@ body {
 @media screen and (max-width: 767px) {
     .gallery_logo {
         width: 136px;
+        margin-bottom: 15px;
     }
     .gallery_flex_pc {
         display: none;
@@ -389,7 +415,7 @@ body {
     }
     .gallery_sp_pic {
         width: 100%;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
     }
 }
 
@@ -430,19 +456,21 @@ body {
     }
     .event_logo {
         width: 96px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
     .event_list {
         display: block;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
+        padding: 20px 25px;
     }
     .event_list ul li {
         font-size: 16px;
         display: flex;
         flex-direction: column;
+        line-height: 1.2;
     }
     .event_list ul li + li {
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .event_list ul li a {
         overflow: hidden;
@@ -460,7 +488,7 @@ body {
 @media screen and (max-width: 767px) {
     .access_logo {
         width: 120px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 }
 
@@ -512,12 +540,15 @@ footer {
 @media screen and (max-width: 767px) {
     .footer_flex {
         display: block;
-        padding: 50px 20px 45px;
+        padding: 40px 20px 25px;
     }
     .footer_flexbox {
         font-size: 18px;
         line-height: 1.72;
-        margin-top: 35px;
+        margin-top: 25px;
+    }
+    .footer_flexbox p {
+        margin-bottom: 8px;
     }
     .footer_flexbox address {
         padding-bottom: 0;
@@ -534,7 +565,7 @@ footer {
 
 @media screen and (max-width: 767px) {
     .copyright {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
 }
 
@@ -544,4 +575,9 @@ footer {
     /* z-index: 99999; 他の要素の下に隠れないように全面配置させます */
     bottom: 30px; /* 上から150pxのところにバナーを配置します */
     right: 30px; /* 右から40pxのところにバナーを配置します */
+}
+@media screen and (max-width: 767px) {
+    .pagetop {
+        width: 100px;
+    }
 }
