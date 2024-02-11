@@ -6,13 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイトです。">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/stlye.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
 </head>
 
 <body>
 
     <header id="header">
+
         <div class="header_slider">
             <div class="header_img">
                 <picture>
@@ -20,7 +28,14 @@
                     <img class="header_pic" src="images/pc_first-100.jpg" alt="店内の様子">
                 </picture>
             </div>
+            <div class="header_img">
+                <picture>
+                    <source srcset="images/sp_main_vs_2@2x-100.jpg" media="(max-width: 767px)">
+                    <img class="header_pic" src="images/slider_2.jpg" alt="店内の様子">
+                </picture>
+            </div>
         </div>
+
         <div class="header_wrap">
             <h1 class="header_logo"><img src="images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE"></h1>
             <nav class="pc_nav">
@@ -97,7 +112,6 @@
                     <p class="menu_item_text">スイーツメニューの概要を100文字程度で紹介します。素材やこだわりなどをアピールしていきます。</p>
                 </li>
             </ul>  -->
-            <!-- SPの写真表示方法は？ -->
             <ul class="menu_flex">
                 <li class="menu_item">
                     <picture>
@@ -129,22 +143,30 @@
             <h2 class="gallery_logo"><img src="images/gallery@2x.png" alt="GALLERY"></h2>
             <div class="gallery_flex_pc">
                 <div class="gallery_pic">
-                    <img src="images/pc_gallary_05-100.jpg" alt="店内の人々">
+                    <a href="images/pc_gallary_05-100.jpg" data-lightbox="album" data-title="ギャラリー1"><img
+                            src="images/pc_gallary_05-100.jpg" alt="店内の人々"></a>
                 </div>
                 <div class="gallery_pic">
-                    <img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆">
+                    <a href="images/pc_gallary_04-100.jpg" data-lightbox="album" data-title="ギャラリー2">
+                        <img src="images/pc_gallary_04-100.jpg" alt="コーヒー豆"></a>
                 </div>
                 <div class="gallery_pic">
-                    <img src="images/pc_gallary_03-100.jpg" alt="店内の様子">
+                    <a href="images/pc_gallary_03-100.jpg" data-lightbox="album" data-title="ギャラリー3">
+                        <img src="images/pc_gallary_03-100.jpg" alt="店内の様子"></a>
                 </div>
                 <div class="gallery_pic">
-                    <img src="images/pc_gallary_02-100.jpg" alt="店内の照明">
+                    <a href="images/pc_gallary_02-100.jpg" data-lightbox="album" data-title="ギャラリー4">
+                        <img src="images/pc_gallary_02-100.jpg" alt="店内の照明"></a>
                 </div>
                 <div class="gallery_pic">
-                    <img src="images/pc_gallary_01-100.jpg" alt="カフェアート">
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="album" data-title="ギャラリー5">
+                        <img src="images/pc_gallary_01-100.jpg" alt="カフェアート"></a>
+                </div>
+                <div class="gallery_pic">
+                    <a href="images/pc_gallary_01-100.jpg" data-lightbox="album" data-title="ギャラリー6">
+                        <img src="images/pc_gallary_01-100.jpg" alt="カフェアート"></a>
                 </div>
             </div>
-            <div class="gallery_sp"><img class="gallery_sp_pic" src="images/mobile_gallery-100.jpg" alt="店内の人々"></div>
         </section>
         <section id="event" class="event">
             <h2 class="event_logo"><img src="images/event@2x.png" alt="EVENT"></h2>
@@ -197,8 +219,51 @@
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });
+
+            $('.header_slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                dots: true,
+                arrows: false,
+            });
+
+            $('.gallery_flex_pc').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            autoplay: true,
+                            autoplaySpeed: 2000,
+                            infinite: true,
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+
         });
     </script>
+    <script src="js/lightbox.min.js"></script>
 
 </body>
 
