@@ -409,7 +409,6 @@ body {
 }
 .gallery_pic {
     width: 34%;
-    margin-bottom: 70px;
 }
 .gallery_sp {
     display: none;
@@ -418,12 +417,7 @@ body {
 /* galleryスライダー実装 */
 
 .slick-arrow {
-    display: block;
-    position: absolute;
-    top: -50px;
-    bottom: 0;
-    margin: auto;
-    padding: 0;
+    height: 35px;
     z-index: 3;
 }
 .slick-prev {
@@ -448,6 +442,9 @@ body {
 .slick-prev:before {
     transform: rotate(-135deg);
 }
+.slick-slide img {
+    width: 100%;
+}
 
 @media screen and (max-width: 767px) {
     .gallery_logo {
@@ -455,10 +452,10 @@ body {
         margin-bottom: 15px;
     }
     .slick-prev {
-        left: 15%;
+        left: 10%;
     }
     .slick-next {
-        right: 15%;
+        right: 10%;
     }
     .slick-next:before,
     .slick-prev:before {
@@ -490,7 +487,7 @@ body {
 .event {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 70px 10px 0;
 }
 .event_logo {
     width: 173px;
@@ -520,7 +517,7 @@ body {
 
 @media screen and (max-width: 767px) {
     .event {
-        padding: 0 20px;
+        padding: 35px 20px 0;
     }
     .event_logo {
         width: 96px;
