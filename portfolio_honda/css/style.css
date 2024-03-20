@@ -149,8 +149,10 @@
 }
 .works_img {
     text-align: center;
-    background-color: #fff;
     margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .works_text_1 {
     font-size: 14px;
@@ -171,11 +173,34 @@
     margin-top: 65px;
 }
 .contact {
-    margin-top: 125px;
+    max-width: 610px;
+    margin: 125px auto 0;
+    position: relative;
+}
+.contact_obj_1 {
+    position: absolute;
+    display: block;
+    top: -45px;
+    right: -306px;
+    width: 244px;
 }
 .contact_text {
     padding-top: 60px;
     text-align: center;
     letter-spacing: 0.06em;
     line-height: 1.75;
+}
+.form {
+    margin-top: 15px;
+    position: relative;
+}
+.form_item_flex {
+    flex-direction: column;
+}
+.contact_obj_2 {
+    position: absolute;
+    display: block;
+    top: 285px;
+    left: -382px;
+    width: 310px;
 }

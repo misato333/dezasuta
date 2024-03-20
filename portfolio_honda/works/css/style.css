@@ -1,0 +1,19 @@
+@charset "utf-8";
+.works {
+    max-width: 1000px;
+    margin: 105px auto 0;
+}
+.works_text {
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-top: 80px;
+}
+.works_flex_1 {
+    display: flex;
+    margin-top: 80px;
+}
+/* ボタン */
+.btnbox {
+    text-align: center;
+    margin-top: 80px;
+}

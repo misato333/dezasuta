@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Honda Misato portfolio</title>
     <meta name="description" content="Honda Misatoのポートフォリオサイトです。">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-256x256.png">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
     <header id="header">
-        <div class="header_warp">
+        <div class="header_wrap">
             <h1 class="header_logo"><img src="images/header_logo.svg" alt="Honda Misato Portfolio"></h1>
             <nav class="pc_nav">
                 <ul>
@@ -42,6 +43,8 @@
                 <p class="lead_text3">Portfolio</p>
                 <p class="lead_text4">デザインでココロおどるワクワクを</p>
             </div>
+            <!-- スクロールバーHTML入れる
+            <div class="scrolldown"><span>Scroll</span></div> -->
         </div>
         <section id="about" class="about">
             <h2 class="heading underline">About</h2>
@@ -53,6 +56,8 @@
                     目指しています。</p>
                 <div class="about_icon"><img src="images/about_icon.svg" alt="honda misato のアイコン"></div>
             </div>
+            <div class="scrolldown1"><span>Scroll</span></div>
+
             <div class="btnbox">
                 <a href="about/index.html" class="btn btn_color">
                     <span>View more</span>
@@ -89,7 +94,7 @@
             <div class="works_flex_1">
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_1.jpg" alt="美容室　架空Webサイト"></div>
+                        <div class="works_img"><img src="images/works_1@2x.jpg" alt="美容室　架空Webサイト"></div>
                     </div>
                     <h3 class="works_text_1">美容室 架空Webサイト</h3>
                     <p class="works_text_2">Design</p>
@@ -97,14 +102,14 @@
                 </div>
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_2.jpg" alt="高級感ハンバーガー　バナー"></div>
+                        <div class="works_img"><img src="images/works_2@2x.jpg" alt="高級感ハンバーガー　バナー"></div>
                     </div>
                     <h3 class="works_text_1">高級感ハンバーガー　バナー</h3>
                     <p class="works_text_2">Design</p>
                 </div>
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_3.jpg" alt="POPハンバーガーバナー"></div>
+                        <div class="works_img"><img src="images/works_3@2x.jpg" alt="POPハンバーガーバナー"></div>
                     </div>
                     <h3 class="works_text_1">POPハンバーガーバナー</h3>
                     <p class="works_text_2">Design</p>
@@ -113,21 +118,21 @@
             <div class="works_flex_2">
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_4.jpg" alt="スクール課題　バナー"></div>
+                        <div class="works_img"><img src="images/works_4@2x.jpg" alt="スクール課題　バナー"></div>
                     </div>
                     <h3 class="works_text_1">スクール課題　バナー</h3>
                     <p class="works_text_2">Trace</p>
                 </div>
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_5.jpg" alt="スクール課題　バナー"></div>
+                        <div class="works_img"><img src="images/works_5@2x.jpg" alt="スクール課題　バナー"></div>
                     </div>
                     <h3 class="works_text_1">スクール課題　バナー</h3>
                     <p class="works_text_2">Trace</p>
                 </div>
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_6.jpg" alt="スクール課題　バナー"></div>
+                        <div class="works_img"><img src="images/works_6@2x.jpg" alt="スクール課題　バナー"></div>
                     </div>
                     <h3 class="works_text_1">スクール課題　バナー</h3>
                     <p class="works_text_2">Trace</p>
@@ -141,16 +146,51 @@
             <div class="works_line_under"><img src="images/works_line_1.svg" alt="ライン"></div>
         </section>
         <section id="contact" class="contact">
+            <div class="contact_obj_1"><img src="images/contact_1.svg" alt="コンタクトオブエクト"></div>
             <h2 class="heading">Contact</h2>
             <p class="contact_text">ご覧いただきありがとうございます。<br>
                 どんなことでもお気軽にお問い合わせ下さい。</p>
-
+            <form class="form">
+                <div class="form_item_flex">
+                    <div class="form_item">
+                        <label for="name">お名前</label>
+                        <input id="name" type="text" name="name" placeholder="例）山田太郎">
+                    </div>
+                    <div class="form_item">
+                        <label for="email">メールアドレス</label>
+                        <input id="email" type="text" name="email" placeholder="sample@gmail.com">
+                    </div>
+                    <div class="form_item">
+                        <label for="tel">電話番号</label>
+                        <input id="tel" type="text" name="tel" placeholder="000-000-000">
+                    </div>
+                    <div class="form_item">
+                        <label for="msg">お問い合わせ内容</label>
+                        <textarea id="msg" class="textlines" name="textarea"></textarea>
+                    </div>
+                    <button type="submit" class="button" value="送信する"></button>
+                </div>
+            </form>
+            <div class="contact_obj_2"><img src="images/contact_2.svg" alt="コンタクトオブエクト"></div>
         </section>
-
 
     </main>
     <footer>
+        <div class="footer">
+            <div class="footer_icon"><img src="images/footer_icon.svg" alt="アイコン"></div>
+            <nav class="footer_pc_nav">
+                <ul>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#works">works</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <p class="copyright">©︎ Honda Misato portfolio</p>
+        </div>
     </footer>
+    <div class="cta">
+        <a href="#header"><img class="cta_btn" src="images/cta.svg" alt="top"></a>
+    </div>
 
     <script src="js/script.js"></script>
 
