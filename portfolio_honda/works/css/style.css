@@ -8,12 +8,147 @@
     text-align: center;
     margin-top: 80px;
 }
-.works_flex_1 {
-    display: flex;
-    margin-top: 80px;
+.works_flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 58px;
+    padding-top: 50px;
 }
+.works_bg_color_1 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #d48587 0%,
+        #d48587 23%
+    );
+}
+.works_bg_color_2 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #ca6e3d 0%,
+        #ca6e3d 23%
+    );
+}
+.works_bg_color_3 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #cc4416 0%,
+        #cc4416 23%
+    );
+}
+.works_bg_color_4 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #c25992 0%,
+        #c25992 23%
+    );
+}
+.works_bg_color_5 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #edaa30 0%,
+        #edaa30 23%
+    );
+}
+.works_bg_color_6 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #74c6c3 0%,
+        #74c6c3 23%
+    );
+}
+.works_bg_color_7 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #d4337d 0%,
+        #d4337d 23%
+    );
+}
+.works_bg_color_8 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #63b0cd 0%,
+        #63b0cd 23%
+    );
+}
+.works_bg_color_9 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #0a174e 0%,
+        #0a174e 23%
+    );
+}
+.works_bg_color_10 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #d3786f 0%,
+        #d3786f 23%
+    );
+}
+.works_bg_color_11 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #585d4e 0%,
+        #585d4e 23%
+    );
+}
+.works_bg_color_12 {
+    background: linear-gradient(
+        180deg,
+        #fff 0%,
+        #fff 77%,
+        #3a5685 0%,
+        #3a5685 23%
+    );
+}
+.works_bg {
+    display: flex;
+    align-items: center;
+    aspect-ratio: 1 / 0.8;
+}
+.works_img {
+    width: 100%;
+    height: 63%;
+    text-align: center;
+}
+.works_img img {
+    height: 100%;
+    box-shadow: 4px 4px 5px rgb(0, 0, 0, 0.3);
+}
+.works_text_1 {
+    padding-top: 20px;
+}
+
+.works_text_2 {
+    padding: 16px 0 16px;
+}
+
 /* ボタン */
 .btnbox {
     text-align: center;
     margin-top: 80px;
+}
+.btn_back {
+    padding: 15px 75px 12px;
 }

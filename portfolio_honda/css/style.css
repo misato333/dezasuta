@@ -5,43 +5,43 @@
 .obj_1 {
     position: absolute;
     display: block;
-    top: -160px;
-    left: 32px;
+    top: -42%;
+    left: 3%;
     width: 333px;
 }
 .obj_2 {
     position: absolute;
     display: block;
-    top: -85px;
-    left: 38%;
+    top: -20%;
+    left: 39%;
     width: 232px;
 }
 .obj_3 {
     position: absolute;
     display: block;
-    top: -180px;
-    right: 58px;
+    top: -48%;
+    right: 5%;
     width: 322px;
 }
 .obj_4 {
     position: absolute;
     display: block;
-    top: 320px;
-    left: 90px;
+    top: 80%;
+    left: 7%;
     width: 198px;
 }
 .obj_5 {
     position: absolute;
     display: block;
-    top: 360px;
+    top: 93%;
     left: 43%;
     width: 137px;
 }
 .obj_6 {
     position: absolute;
     display: block;
-    top: 270px;
-    right: 170px;
+    top: 74%;
+    right: 13%;
     width: 244px;
 }
 .obj_inner {
@@ -95,6 +95,66 @@
     width: 190px;
 }
 
+/*スクロールダウン全体の場所*/
+.scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 13%;
+    bottom: -153px;
+    /*全体の高さ*/
+    height: 50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown span {
+    font-family: asap, sans-serif;
+    font-size: 14px;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    /*描画位置*/
+    position: absolute;
+    left: -4px;
+    top: -35px;
+    /*テキストの形状*/
+    color: #333;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 1px;
+    height: 30px;
+    background: #333;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 1.4s ease-in-out infinite;
+    opacity: 0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
+}
+
 .skill {
     max-width: 1000px;
     margin-top: 100px;
@@ -135,24 +195,28 @@
     margin: 100px auto 0;
 }
 .works_heading {
-    margin-top: 100px;
+    margin: 100px 0 50px;
 }
-.works_flex_1 {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 100px;
+.works_flex {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 58px;
+    padding-top: 50px;
 }
 .works_bg {
+    display: flex;
+    align-items: center;
     background-color: #fff;
-    width: 295px;
-    padding: 25px 0;
+    aspect-ratio: 1 / 0.8;
 }
 .works_img {
-    text-align: center;
-    margin: auto;
     width: 100%;
+    height: 63%;
+    text-align: center;
+}
+.works_img img {
     height: 100%;
-    object-fit: cover;
+    box-shadow: 4px 4px 5px rgb(0, 0, 0, 0.3);
 }
 .works_text_1 {
     font-size: 14px;
@@ -173,22 +237,22 @@
     margin-top: 65px;
 }
 .contact {
-    max-width: 610px;
+    max-width: 440px;
     margin: 125px auto 0;
     position: relative;
 }
 .contact_obj_1 {
     position: absolute;
     display: block;
-    top: -45px;
-    right: -306px;
+    top: -5%;
+    right: -90%;
     width: 244px;
 }
 .contact_text {
-    padding-top: 60px;
     text-align: center;
     letter-spacing: 0.06em;
     line-height: 1.75;
+    padding-top: 60px;
 }
 .form {
     margin-top: 15px;
@@ -197,10 +261,25 @@
 .form_item_flex {
     flex-direction: column;
 }
+.form_item label {
+    display: block;
+    padding: 40px 0 13px;
+}
+.form_item input {
+    width: 100%;
+    border: 1px solid #333;
+    padding: 16px;
+}
+.contact_tex2 {
+    text-align: center;
+    letter-spacing: 0.06em;
+    line-height: 1.75;
+    padding: 50px 0 65px;
+}
 .contact_obj_2 {
     position: absolute;
     display: block;
-    top: 285px;
-    left: -382px;
+    top: 77%;
+    left: -106%;
     width: 310px;
 }
