@@ -146,9 +146,5 @@
 
 /* ボタン */
 .btnbox {
-    text-align: center;
     margin-top: 80px;
-}
-.btn_back {
-    padding: 15px 75px 12px;
 }

@@ -223,11 +223,6 @@
     font-weight: 500;
     padding: 20px 0 10px;
 }
-.works_flex_2 {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 50px;
-}
 .works_text_2 {
     color: #666666;
     font-family: asap, sans-serif;
