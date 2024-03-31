@@ -32,8 +32,38 @@
     line-height: 1.688;
     padding-right: 20px;
 }
+@media screen and (max-width: 767px) {
+    .works_text {
+        max-width: 315px;
+        margin: auto;
+    }
+    .works_text {
+        margin-top: 35px;
+    }
+    .works_img {
+        width: 315px;
+        margin: 65px auto 35px;
+    }
+    .works {
+        max-width: 315px;
+        margin: auto;
+    }
+    .works_text_1 {
+        font-size: 14px;
+    }
+    .works_text_2 {
+        font-size: 14px;
+        line-height: 1.785;
+        padding-right: 10px;
+    }
+}
 
 /* ボタン */
 .btnbox {
     margin-top: 80px;
+}
+@media screen and (max-width: 767px) {
+    .btnbox {
+        margin-top: 40px;
+    }
 }

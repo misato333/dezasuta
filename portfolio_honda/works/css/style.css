@@ -143,8 +143,44 @@
 .works_text_2 {
     padding: 16px 0 16px;
 }
+@media screen and (max-width: 767px) {
+    .works {
+        margin-top: 30px;
+    }
+    .works_flex {
+        display: flex;
+        flex-direction: column;
+        padding-top: 35px;
+        gap: 35px;
+    }
+    .works_box {
+        max-width: 295px;
+        margin: auto;
+    }
+    .works_text {
+        font-size: 14px;
+        margin-top: 35px;
+    }
+    .works_text_1,
+    .works_text_2,
+    .works_text_3 {
+        font-size: 14px;
+    }
+    .works_text_1 {
+        padding-top: 20px;
+    }
+    .works_text_2,
+    .works_text_3 {
+        padding: 15px 0 0;
+    }
+}
 
 /* ボタン */
 .btnbox {
     margin-top: 80px;
+}
+@media screen and (max-width: 767px) {
+    .btnbox {
+        margin-top: 35px;
+    }
 }
