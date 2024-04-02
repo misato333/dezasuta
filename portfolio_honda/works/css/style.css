@@ -174,13 +174,3 @@
         padding: 15px 0 0;
     }
 }
-
-/* ボタン */
-.btnbox {
-    margin-top: 80px;
-}
-@media screen and (max-width: 767px) {
-    .btnbox {
-        margin-top: 35px;
-    }
-}

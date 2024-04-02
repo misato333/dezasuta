@@ -407,6 +407,9 @@
         max-width: 295px;
         margin: auto;
     }
+    .pc_only {
+        display: none;
+    }
     .works_line_under {
         margin-top: 70px;
     }
@@ -416,6 +419,7 @@
     max-width: 440px;
     margin: 125px auto 0;
     position: relative;
+    overflow: hidden;
 }
 .contact_obj_1 {
     position: absolute;
@@ -469,6 +473,8 @@
 @media screen and (max-width: 767px) {
     .contact {
         margin-top: 70px;
+        margin-left: -20px;
+        margin-right: -20px;
     }
     .contact_text {
         font-size: 14px;

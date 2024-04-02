@@ -1,4 +1,7 @@
 @charset "utf-8";
+.about_obj {
+    overflow: hidden;
+}
 .about {
     max-width: 800px;
     margin: 105px auto 0;
@@ -14,10 +17,8 @@
 .heading {
     text-align: left;
 }
-.heading_sp {
-    display: none;
-}
-.heading_sp p {
+.heading_sp1,
+.heading_sp2 {
     display: none;
 }
 .about_heading_text {
@@ -94,7 +95,7 @@
         margin-top: 60px;
     }
     .about_obj_top1 {
-        top: -52px;
+        top: -40px;
         right: -130px;
         width: 292px;
         transform: rotate(30deg);
@@ -109,15 +110,16 @@
     .about_heading_text {
         display: none;
     }
-    .heading_sp {
+    .heading_sp1 {
         display: block;
         text-align: center;
         font-size: 32px;
         font-weight: 700;
     }
-    .heading_sp {
+    .heading_sp2 {
         display: block;
         text-align: center;
+        font-size: 12px;
         padding: 15px 0;
     }
     .about_flex {
@@ -174,9 +176,4 @@
         line-height: 1.785;
         padding: 25px 8px 0;
     }
-}
-
-.btnbox {
-    text-align: center;
-    margin-top: 40px;
 }

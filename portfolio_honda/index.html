@@ -8,19 +8,21 @@
     <meta name="description" content="Honda Misatoのポートフォリオサイトです。">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="android-chrome-256x256.png">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="header">
         <div class="header_wrap">
-            <h1 class="header_logo"><img src="images/header_logo.svg" alt="Honda Misato Portfolio"></h1>
+            <h1 class="header_logo"><a href="./index.html"><img src="images/header_logo.svg"
+                        alt="Honda Misato Portfolio"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="../portfolio_honda/about/index.html">about</a></li>
-                    <li><a href="../portfolio_honda/works/index.html">works</a></li>
+                    <li><a href="./about/index.html">about</a></li>
+                    <li><a href="./works/index.html">works</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
@@ -37,7 +39,7 @@
 
     <main>
         <div id="lead" class="lead">
-            <!-- obj_1がはみでて横スクロール出る　max-width: 375px-->
+            <!-- obj_1が切れる-->
             <div class="obj_1"><img src="images/top_1.svg" alt="オブジェクト1"></div>
             <div class="obj_2"><img src="images/top_2.svg" alt="オブジェクト2"></div>
             <div class="obj_3"><img src="images/top_3.svg" alt="オブジェクト3"></div>
@@ -100,44 +102,53 @@
             <div class="works_flex">
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_1@2x.jpg" alt="美容室　架空Webサイト"></div>
+                        <div class="works_img"><a href="./works/works1/index.html"><img src="images/works_1@2x.jpg"
+                                    alt="美容室 架空Webサイト"></a></div>
                     </div>
                     <h3 class="works_text_1">美容室 架空Webサイト</h3>
                     <p class="works_text_2">Design</p>
                 </div>
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_2@2x.jpg" alt="高級感ハンバーガー　バナー"></div>
+                        <div class="works_img"><a href="./works/images/works_2.jpg" data-lightbox="works"
+                                data-title="高級感ハンバーガー バナー"><img src="images/works_2@2x.jpg" alt="高級感ハンバーガー バナー"></a>
+                        </div>
                     </div>
-                    <h3 class="works_text_1">高級感ハンバーガー　バナー</h3>
+                    <h3 class="works_text_1">高級感ハンバーガー バナー</h3>
                     <p class="works_text_2">Design</p>
                 </div>
                 <div class="works_box">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_3@2x.jpg" alt="POPハンバーガーバナー"></div>
+                        <div class="works_img"><a href="./works/images/works_3.jpg" data-lightbox="works"
+                                data-title="POPハンバーガーバナー"><img src="images/works_3@2x.jpg" alt="POPハンバーガー バナー"></a>
+                        </div>
                     </div>
-                    <h3 class="works_text_1">POPハンバーガーバナー</h3>
+                    <h3 class="works_text_1">POPハンバーガー バナー</h3>
                     <p class="works_text_2">Design</p>
                 </div>
-                <div class="works_box">
+                <div class="works_box pc_only">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_4@2x.jpg" alt="スクール課題　バナー"></div>
+                        <div class="works_img"><a href="./works/images/works_4.jpg" data-lightbox="works"
+                                data-title="スクール課題 バナー"><img src="images/works_4@2x.jpg" alt="スクール課題 バナー"></a></div>
                     </div>
-                    <h3 class="works_text_1">スクール課題　バナー</h3>
+                    <h3 class="works_text_1">スクール課題 バナー</h3>
                     <p class="works_text_2">Trace</p>
                 </div>
-                <div class="works_box">
+                <div class="works_box pc_only">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_5@2x.jpg" alt="スクール課題　バナー"></div>
+                        <div class="works_img"><a href="./works/images/works_5.jpg" data-lightbox="works"
+                                data-title="スクール課題 バナーー"><img src="images/works_5@2x.jpg" alt="スクール課題 バナー"></a>
+                        </div>
                     </div>
-                    <h3 class="works_text_1">スクール課題　バナー</h3>
+                    <h3 class="works_text_1">スクール課題 バナー</h3>
                     <p class="works_text_2">Trace</p>
                 </div>
-                <div class="works_box">
+                <div class="works_box pc_only">
                     <div class="works_bg">
-                        <div class="works_img"><img src="images/works_6@2x.jpg" alt="スクール課題　バナー"></div>
+                        <div class="works_img"><a href="./works/images/works_6.jpg" data-lightbox="works"
+                                data-title="スクール課題 バナー"><img src="images/works_6@2x.jpg" alt="スクール課題 バナー"></a></div>
                     </div>
-                    <h3 class="works_text_1">スクール課題　バナー</h3>
+                    <h3 class="works_text_1">スクール課題 バナー</h3>
                     <p class="works_text_2">Trace</p>
                 </div>
             </div>
@@ -181,6 +192,9 @@
                     <button type="submit" class="btn btn_color" value="送信する"><span>送信する</span></button>
                 </div>
             </form>
+            <script type="text/javascript">
+                var submitted = false;
+            </script>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
                 onload="if(submitted)  {window.location='thanks.html';}"></iframe>
             <div class="contact_obj_2"><img src="images/contact_2.svg" alt="コンタクトオブエクト"></div>
@@ -189,11 +203,11 @@
     </main>
     <footer>
         <div class="footer">
-            <div class="footer_icon"><img src="images/footer_icon.svg" alt="アイコン"></div>
+            <div class="footer_icon"><a href="./index.html"><img src="images/footer_icon.svg" alt="アイコン"></a></div>
             <nav class="footer_pc_nav">
                 <ul>
-                    <li><a href="../portfolio_honda/about/index.html">about</a></li>
-                    <li><a href="../portfolio_honda/works/index.html">works</a></li>
+                    <li><a href="./about/index.html">about</a></li>
+                    <li><a href="./works/index.html">works</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
             </nav>
@@ -203,18 +217,24 @@
     <div class="cta">
         <a href="#header"><img class="cta_btn" src="images/cta.svg" alt="top"></a>
     </div>
-    <!-- <script>
+
+    <script>
         $(function () {
             $('.sp_btn, .sp_nav li').on('click', function () {
                 $('.sp_nav').fadeToggle();
                 $('.sp_btn').toggleClass('open');
             });
-        });</script> -->
-
+        });</script>
     <script src="js/script.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 300,
+            'wrapAround': true,
+            'alwaysShowNavOnTouchDevices': true
+        })
+    </script>
 
 </body>
-
-
 
 </html>

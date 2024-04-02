@@ -9,27 +9,30 @@
     <link rel="shortcut icon" href="../../favicon.ico">
     <link rel="apple-touch-icon" href="../../apple-touch-icon.png">
     <link rel="icon" type="image/png" href="../../android-chrome-192x192.png">
+    <link rel="stylesheet" href="../../css/lightbox.min.css">
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../works1/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header id="header">
         <div class="header_wrap">
-            <h1 class="header_logo"><img src="../../images/header_logo.svg" alt="Honda Misato Portfolio"></h1>
+            <h1 class="header_logo"><a href="../../index.html"><img src="../../images/header_logo.svg"
+                        alt="Honda Misato Portfolio"></a></h1>
             <nav class="pc_nav">
                 <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#works">works</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../../about/index.html">about</a></li>
+                    <li><a href="../../works/index.html">works</a></li>
+                    <li><a href="../../index.html#contactt">contact</a></li>
                 </ul>
             </nav>
             <div class="sp_btn"><span></span></div>
             <nav class="sp_nav">
                 <ul>
-                    <li><a href="../portfolio_honda/about/index.html">about</a></li>
-                    <li><a href="../portfolio_honda/works/index.html">works</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../../about/index.html">about</a></li>
+                    <li><a href="../../works/index.html">works</a></li>
+                    <li><a href="../../index.html#contactt">contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,13 +40,14 @@
 
     <main>
         <p class="works_text">クリックすると表示されます。</p>
-        <div class="works_img"><img src="images/works1_img@2x.png" alt="架空Webサイト　美容室　LIFE"></div>
+        <div class="works_img"><a href="../works1/images/LIFE_pc.jpg" data-lightbox="works"
+                data-title="架空Webサイト 美容室 LIFE"><img src="images/works1_img@2x.png" alt="架空Webサイト 美容室 LIFE"></a></div>
         <div class="works">
             <div class="line"></div>
             <div class="works_flex">
                 <p class="works_text_1">概要</p>
                 <div>
-                    <p class="works_text_2">架空Webサイト　美容室　LIFE</p>
+                    <p class="works_text_2">架空Webサイト 美容室 LIFE</p>
                 </div>
             </div>
             <div class="line"></div>
@@ -107,12 +111,13 @@
 
     <footer>
         <div class="footer">
-            <div class="footer_icon"><img src="../../images/footer_icon.svg" alt="アイコン"></div>
+            <div class="footer_icon"><a href="../../index.html"><img src="../../images/footer_icon.svg" alt="アイコン"></a>
+            </div>
             <nav class="footer_pc_nav">
                 <ul>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#works">works</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a href="../../about/index.html">about</a></li>
+                    <li><a href="../../works/index.html">works</a></li>
+                    <li><a href="../../index.html#contactt">contact</a></li>
                 </ul>
             </nav>
             <p class="copyright">©︎ Honda Misato portfolio</p>
@@ -121,7 +126,16 @@
     <div class="cta">
         <a href="#header"><img class="cta_btn" src="../../images/cta.svg" alt="top"></a>
     </div>
-    <script src="../js/script.js"></script>
+
+    <script>
+        $(function () {
+            $('.sp_btn, .sp_nav li').on('click', function () {
+                $('.sp_nav').fadeToggle();
+                $('.sp_btn').toggleClass('open');
+            });
+        });</script>
+    <script src="../../js/script.js"></script>
+    <script src="../../js/lightbox.min.js"></script>
 </body>
 
 </html>
