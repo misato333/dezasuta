@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -46,7 +47,7 @@
                 <div class="works_box">
                     <div class="works_bg_color_1">
                         <div class="works_bg">
-                            <div class="works_img"><a href="./works1/index.html"><img src="../works/images/works_1.jpg"
+                            <div class="works_img"><a href="works1.html"><img src="../works/images/works_1.jpg"
                                         alt="架空Webサイト美容室 LIFE"></a></div>
                         </div>
                     </div>
@@ -189,7 +190,6 @@
                     <p class="works_text_2">バナーデザイン</p>
                     <p class="works_text_3">使用ツールPhotoshop</p>
                 </div>
-
             </div>
 
             <!-- ボタン -->
@@ -199,7 +199,6 @@
                 </a>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -218,23 +217,16 @@
     <div class="cta">
         <a href="#header"><img class="cta_btn" src="../images/cta.svg" alt="top"></a>
     </div>
-
     <script>
         $(function () {
-            $('.sp_btn, .sp_nav li').on('click', function () {
-                $('.sp_nav').fadeToggle();
-                $('.sp_btn').toggleClass('open');
-            });
-        });</script>
-    <script src="../js/script.js"></script>
-    <script src="../js/lightbox.min.js"></script>
-    <script>
-        lightbox.option({
-            'resizeDuration': 300,
-            'wrapAround': true,
-            'alwaysShowNavOnTouchDevices': true
-        })
+            lightbox.option({
+                'resizeDuration': 300,
+                'wrapAround': true,
+                'alwaysShowNavOnTouchDevices': true
+            })
+        });
     </script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

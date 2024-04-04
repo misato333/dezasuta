@@ -12,9 +12,19 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
 </head>
 
 <body>
+    <!-- loadingページ -->
+    <div class="loading">
+        <div class="loading_box">
+            <div class="loading_obj_1"><img src="images/top_2.svg" alt="オブジェクト1"></div>
+            <div class="loading_obj_2"><img src="images/top_3.svg" alt="オブジェクト2"></div>
+            <div class="loading_obj_3"><img src="images/top_6.svg" alt="オブジェクト3"></div>
+        </div>
+    </div>
+
     <header id="header">
         <div class="header_wrap">
             <h1 class="header_logo"><a href="./index.html"><img src="images/header_logo.svg"
@@ -36,10 +46,8 @@
             </nav>
         </div>
     </header>
-
     <main>
         <div id="lead" class="lead">
-            <!-- obj_1が切れる-->
             <div class="obj_1"><img src="images/top_1.svg" alt="オブジェクト1"></div>
             <div class="obj_2"><img src="images/top_2.svg" alt="オブジェクト2"></div>
             <div class="obj_3"><img src="images/top_3.svg" alt="オブジェクト3"></div>
@@ -98,7 +106,9 @@
         </section>
         <section id="works" class="works">
             <div class="works_line_top"><img src="images/works_line_1.svg" alt="ライン"></div>
-            <h2 class="heading works_heading">Works</h2>
+            <div>
+                <h2 class="heading works_heading">Works</h2>
+            </div>
             <div class="works_flex">
                 <div class="works_box">
                     <div class="works_bg">
@@ -162,6 +172,7 @@
         <section id="contact" class="contact">
             <!-- contact_obj_1がはみでて横スクロール出る-->
             <div class="contact_obj_1"><img src="images/contact_1.svg" alt="コンタクトオブエクト"></div>
+
             <h2 class="heading">Contact</h2>
             <p class="contact_text">ご覧いただきありがとうございます。<br>
                 どんなことでもお気軽にお問い合わせ下さい。</p>
@@ -192,7 +203,7 @@
                     <button type="submit" class="btn btn_color" value="送信する"><span>送信する</span></button>
                 </div>
             </form>
-            <script type="text/javascript">
+            <script>
                 var submitted = false;
             </script>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
@@ -201,6 +212,7 @@
         </section>
 
     </main>
+
     <footer>
         <div class="footer">
             <div class="footer_icon"><a href="./index.html"><img src="images/footer_icon.svg" alt="アイコン"></a></div>
@@ -220,21 +232,15 @@
 
     <script>
         $(function () {
-            $('.sp_btn, .sp_nav li').on('click', function () {
-                $('.sp_nav').fadeToggle();
-                $('.sp_btn').toggleClass('open');
-            });
-        });</script>
-    <script src="js/script.js"></script>
-    <script src="js/lightbox.min.js"></script>
-    <script>
-        lightbox.option({
-            'resizeDuration': 300,
-            'wrapAround': true,
-            'alwaysShowNavOnTouchDevices': true
-        })
-    </script>
+            lightbox.option({
+                'resizeDuration': 300,
+                'wrapAround': true,
+                'alwaysShowNavOnTouchDevices': true
+            })
+        });
 
+    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

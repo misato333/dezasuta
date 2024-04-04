@@ -1,6 +1,7 @@
 @charset "utf-8";
 .about_obj {
     overflow: hidden;
+    padding-bottom: 20px;
 }
 .about {
     max-width: 800px;

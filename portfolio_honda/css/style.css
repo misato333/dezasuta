@@ -1,48 +1,298 @@
 @charset "utf-8";
+.loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 1s;
+    background-color: #fcfcfc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.loading_box {
+    max-width: 300px;
+    margin: 300px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.loading_obj_1 {
+    top: -47%;
+    left: 3%;
+    width: 60px;
+}
+.loading_obj_2 {
+    width: 60px;
+}
+.loading_obj_3 {
+    width: 60px;
+}
+.loading_obj_1 {
+    animation: obj_1 ease-in-out 3s infinite alternate;
+    -webkit-animation: obj_1 ease-in-out 3s infinite alternate;
+    -moz-animation: obj_1 ease-in-out 3s infinite alternate;
+}
+@keyframes obj_1 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, -30px);
+    }
+}
+@-webkit-keyframes obj_1 {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+    100% {
+        -webkit-transform: translate(0%, -30px);
+    }
+}
+
+@-moz-keyframes obj_1 {
+    0% {
+        -moz-transform: translate(0%, 0%);
+    }
+    100% {
+        -moz-transform: translate(0%, -30px);
+    }
+}
+
+.loading_obj_2 {
+    animation: obj_2 0.6s alternate infinite;
+    -webkit-animation: obj_2 0.6s alternate infinite;
+    -moz-animation: obj_2 0.6s alternate infinite;
+}
+@keyframes obj_2 {
+    0% {
+        transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        transform: translate(0%, -60px);
+    }
+}
+@-webkit-keyframes obj_2 {
+    0% {
+        -webkit-transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        -webkit-transform: translate(0%, -60px);
+    }
+}
+
+@-moz-keyframes obj_2 {
+    0% {
+        -moz-transform: translate(0%, 0%) rotateX(25deg);
+    }
+    100% {
+        -moz-transform: translate(0%, -60px);
+    }
+}
+
+.loading_obj_3 {
+    animation: obj_3 ease-in-out 2s infinite alternate;
+    -webkit-animation: obj_3 ease-in-out 2s infinite alternate;
+    -moz-animation: obj_3 ease-in-out 2s infinite alternate;
+}
+@keyframes obj_3 {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    100% {
+        transform: translate(0%, -30px);
+    }
+}
+@-webkit-keyframes obj_3 {
+    0% {
+        -webkit-transform: translate(0%, 0%);
+    }
+    100% {
+        -webkit-transform: translate(0%, -30px);
+    }
+}
+
+@-moz-keyframes obj_3 {
+    0% {
+        -moz-transform: translate(0%, 0%);
+    }
+    100% {
+        -moz-transform: translate(0%, -30px);
+    }
+}
+
+/* TOPcss */
 .lead {
     position: relative;
 }
 .obj_1 {
     position: absolute;
     display: block;
-    top: -42%;
+    top: -47%;
     left: 3%;
-    width: 27.5%;
+    width: 26%;
+    animation: pikopiko 1.4s steps(2, start) infinite;
 }
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
 .obj_2 {
     position: absolute;
     display: block;
     top: -16%;
     left: 39%;
     width: 18%;
+    animation: pyonpyon 2s infinite ease;
+}
+
+@keyframes pyonpyon {
+    0% {
+        transform: translate(0, 0);
+    }
+    5% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(0, -15px);
+    }
+    25% {
+        transform: translate(0, 0);
+    }
+    30% {
+        transform: translate(0, -15px);
+    }
+    50% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 .obj_3 {
     position: absolute;
     display: block;
     top: -46%;
     right: 5%;
-    width: 25%;
+    width: 23%;
+    animation: poyoyon3 2.5s infinite;
+    opacity: 1;
+}
+@keyframes poyoyon3 {
+    0%,
+    40% {
+        transform: skew(0deg, 0deg);
+    }
+    5% {
+        transform: skew(5deg, 5deg);
+    }
+    10% {
+        transform: skew(-4deg, -4deg);
+    }
+    15% {
+        transform: skew(3deg, 3deg);
+    }
+    20% {
+        transform: skew(-2deg, -2deg);
+    }
+    25% {
+        transform: skew(1deg, 1deg);
+    }
+    30% {
+        transform: skew(-0.6deg, -0.6deg);
+    }
+    35% {
+        transform: skew(0.3deg, 0.3deg);
+    }
 }
 .obj_4 {
     position: absolute;
     display: block;
-    top: 78%;
+    top: 84%;
     left: 7%;
-    width: 15%;
+    width: 14%;
+    animation: poyoyon3 2.5s infinite;
+    opacity: 1;
+}
+@keyframes poyoyon3 {
+    0%,
+    40% {
+        transform: skew(0deg, 0deg);
+    }
+    5% {
+        transform: skew(5deg, 5deg);
+    }
+    10% {
+        transform: skew(-4deg, -4deg);
+    }
+    15% {
+        transform: skew(3deg, 3deg);
+    }
+    20% {
+        transform: skew(-2deg, -2deg);
+    }
+    25% {
+        transform: skew(1deg, 1deg);
+    }
+    30% {
+        transform: skew(-0.6deg, -0.6deg);
+    }
+    35% {
+        transform: skew(0.3deg, 0.3deg);
+    }
 }
 .obj_5 {
     position: absolute;
     display: block;
-    top: 93%;
+    top: 100%;
     left: 44%;
     width: 10%;
+    animation: poyon 1.2s infinite;
+}
+
+@keyframes poyon {
+    0% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
+    15% {
+        transform: scale(0.9, 0.9) translate(0%, 5%);
+    }
+    30% {
+        transform: scale(1.3, 0.8) translate(0%, 10%);
+    }
+    50% {
+        transform: scale(0.8, 1.3) translate(0%, -10%);
+    }
+    70% {
+        transform: scale(1.1, 0.9) translate(0%, 5%);
+    }
+    100% {
+        transform: scale(1, 1) translate(0%, 0%);
+    }
 }
 .obj_6 {
     position: absolute;
     display: block;
-    top: 65%;
+    top: 75%;
     right: 14%;
-    width: 20%;
+    width: 19%;
+    animation: pikopiko 1.4s steps(2, start) infinite;
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
 }
 .obj_inner {
     position: relative;
@@ -202,6 +452,10 @@
     }
 }
 @media screen and (max-width: 375px) {
+    .main {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
     .obj_1 {
         top: -49%;
         left: 2%;
@@ -237,6 +491,7 @@
 .about {
     max-width: 610px;
     margin: 140px auto 0;
+    position: relative;
 }
 .heading.underline {
     padding-bottom: 20px;
@@ -416,27 +671,45 @@
 }
 
 .contact {
-    max-width: 440px;
-    margin: 125px auto 0;
+    max-width: 1366px;
+    /* max-width: 440px; */
+    margin: auto;
+    margin-top: 0;
+    padding-top: 70px;
     position: relative;
-    overflow: hidden;
+}
+.heading {
+    position: relative;
 }
 .contact_obj_1 {
     position: absolute;
     display: block;
-    top: -5%;
-    right: -48%;
-    width: 58%;
+    top: 3%;
+    right: 5%;
+    width: 20%;
+    transform: rotate(-23deg);
+    animation: pikopiko 1s steps(2, start) infinite;
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
 }
 .contact_text {
     text-align: center;
     letter-spacing: 0.06em;
     line-height: 1.75;
     padding: 60px 0 20px;
-}
-/* .form {
     position: relative;
-} */
+}
+.form {
+    max-width: 440px;
+    margin: auto;
+}
 .form_item_flex {
     flex-direction: column;
 }
@@ -466,15 +739,34 @@
 .contact_obj_2 {
     position: absolute;
     display: block;
-    top: 51%;
-    left: -106%;
-    width: 74%;
+    top: 60%;
+    left: -22px;
+    width: 24%;
+    animation: pikopiko 1s steps(2, start) infinite;
+}
+
+@keyframes pikopiko {
+    0% {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-10deg);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .contact_obj_2 {
+        position: absolute;
+        display: block;
+        top: 56%;
+        width: 22%;
+    }
 }
 @media screen and (max-width: 767px) {
-    .contact {
-        margin-top: 70px;
-        margin-left: -20px;
-        margin-right: -20px;
+    .contact_obj_1 {
+        top: 4%;
+        right: 48px;
+        width: 26%;
     }
     .contact_text {
         font-size: 14px;
@@ -497,8 +789,20 @@
         padding: 40px 0 0;
     }
     .contact_obj_2 {
+        top: 98%;
+        left: 2%;
+        width: 23%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .contact_obj_1 {
+        top: 3%;
+        right: 12%;
+        width: 31%;
+    }
+    .contact_obj_2 {
         top: 101%;
-        left: -5%;
-        width: 32%;
+        left: 0%;
+        width: 31%;
     }
 }
