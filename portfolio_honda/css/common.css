@@ -68,7 +68,7 @@ main {
     }
     .header_logo {
         width: 128px;
-        z-index: 3;
+        z-index: 4;
     }
 }
 
@@ -100,7 +100,6 @@ main {
         display: block;
         height: 23px;
         cursor: pointer;
-        z-index: 2;
     }
     .sp_btn span {
         position: relative;
@@ -111,6 +110,7 @@ main {
         border-radius: 2px;
         background: #333;
         transition: 0.3s;
+        z-index: 4;
     }
     .sp_btn span::before,
     .sp_btn span::after {
@@ -151,7 +151,7 @@ main {
         width: 100%;
         height: 100vh; /* デバイスの高さ100％ */
         background-color: #9dc4c2;
-        z-index: 1;
+        z-index: 3;
     }
     .sp_nav ul {
         display: flex;
